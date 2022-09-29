@@ -1,70 +1,115 @@
 @use "vars";
+@use "colors";
+@use "fonts";
 
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
+
 html {
-	font-family: vars.$font;
+	font-family: fonts.$font;
 	scroll-behavior: smooth;
 }
 
+h2 {
+	font-size: 36px;
+}
+
 .header {
-	height: 70px;
-	background-color: vars.$headerColor;
-}
+	position: fixed;
+	top: 0;
+	z-index: 3;
+	height: 100px;
+	width: 100%;
+	background-color: colors.$mainColor;
+	opacity: 0.95;
 
-.nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 100%;
-	margin: 0 vars.$websiteMargin;
-}
-
-.nav-title {
-	color: vars.$whiteFontColor;
-	text-decoration: none;
-	font-size: 32px;
-	font-family: vars.$titleFont;
-}
-
-.nav-list {
-	display: flex;
-	list-style-type: none;
-	color: vars.$whiteFontColor;
-
-	li {
-		margin-left: 20px;
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		margin: 0 vars.$websiteMargin;
 	}
-	a {
-		color: inherit;
+
+	.nav-title {
+		color: colors.$whiteFontColor;
 		text-decoration: none;
+		font-size: 32px;
+		font-family: fonts.$titleFont;
+	}
+
+	.nav-list {
+		display: flex;
+		list-style-type: none;
+		color: colors.$whiteFontColor;
+
+		li {
+			margin-left: 20px;
+		}
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
 	}
 }
 
 .video-wrapper {
+	position: relative;
 	overflow: hidden;
+
+	.video {
+		width: 100%;
+		height: 900px;
+		margin: -1px;
+		object-fit: cover;
+		clip-path: inset(1px 1px);
+		filter: brightness(40%);
+	}
 }
 
-.video {
-	width: 100%;
-	height: 800px;
-	margin: -1px;
-	object-fit: cover;
-	clip-path: inset(1px 1px);
+.video-text {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: vars.$websiteMargin;
+	color: colors.$whiteFontColor;
+
+	h1 {
+		font-size: 60px;
+		margin-bottom: 20px;
+	}
+
+	h2 {
+		font-size: 32px;
+		margin-bottom: 20px;
+	}
+
+	a {
+		display: inline-block;
+		border: none;
+		border-radius: 5px;
+		margin-top: 10px;
+		padding: 10px 35px;
+		background-color: colors.$mainColor;
+		color: inherit;
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 2.5px;
+		font-family: inherit;
+	}
 }
 
 .about-me {
 	margin: 50px vars.$websiteMargin 20px;
 	display: flex;
-	color: vars.$textColor;
+	justify-content: space-between;
+	color: colors.$textColor;
 
 	h2 {
-		font-size: 36px;
-		margin-bottom: 20px;
-		color: vars.$headerFontColor;
+		color: colors.$headerFontColor;
 	}
 
 	p {
@@ -72,26 +117,94 @@ html {
 	}
 
 	.texts {
-		width: 70%;
+		width: 50%;
 		padding-right: 10px;
 	}
 
 	.images {
 		width: 30%;
 		img {
-			width: 90%;
+			width: 100%;
 		}
 	}
 }
 
 .price-list-background {
-	height: 500px;
-	background-image: url("/images/background-section.jpg");
+	background-image: url("/images/background-price-list.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+
+	.price-list {
+		margin: 0 vars.$websiteMargin;
+		color: colors.$whiteFontColor;
+		padding-bottom: 50px;
+
+		h2 {
+			padding: 30px 0;
+			color: colors.$whiteFontColor;
+		}
+
+		table {
+			width: 100%;
+		}
+
+		th {
+			padding: 20px;
+		}
+		td {
+			padding: 5px 5px 5px 5px;
+		}
+
+		th:nth-child(1) {
+			border-right: none;
+		}
+
+		th:nth-child(2) {
+			border-left: none;
+		}
+
+		td:nth-child(1) {
+			border-right: none;
+		}
+
+		td:nth-child(2) {
+			padding-left: 20px;
+			border-left: none;
+		}
+
+		table,
+		tr,
+		th,
+		td {
+			border: 1px solid #959595;
+			border-collapse: collapse;
+		}
+	}
 }
 
-.price-list {
+.digital-dentistry {
 	margin: 0 vars.$websiteMargin;
+	h2 {
+		color: colors.$headerFontColor;
+		margin-top: 20px;
+	}
+
+	p {
+		padding-top: 20px;
+		color: colors.$textColor;
+	}
+
+	img {
+		padding-top: 20px;
+		width: 30%;
+	}
+}
+
+.courses-inner {
+	height: 1000px;
+	background-image: url("/images/background-courses.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
