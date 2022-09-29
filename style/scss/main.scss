@@ -130,7 +130,7 @@ h2 {
 }
 
 .price-list-background {
-	background-image: url("/images/background-price-list.jpg");
+	background-image: url("../../images/background-price-list.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -185,6 +185,7 @@ h2 {
 
 .digital-dentistry {
 	margin: 0 vars.$websiteMargin;
+	padding-bottom: 50px;
 	h2 {
 		color: colors.$headerFontColor;
 		margin-top: 20px;
@@ -202,9 +203,114 @@ h2 {
 }
 
 .courses-inner {
-	height: 1000px;
-	background-image: url("/images/background-courses.jpg");
+	background-image: url("../../images/background-courses.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	.courses {
+		margin: 0 vars.$websiteMargin;
+		color: colors.$whiteFontColor;
+
+		h2,
+		h3 {
+			padding: 30px 0;
+		}
+
+		.courses-card {
+			display: flex;
+			justify-content: space-evenly;
+			padding-bottom: 50px;
+		}
+
+		.course-card {
+			border: 1px solid #fff;
+			border-radius: 5px;
+			width: 20%;
+			text-align: center;
+
+			h4,
+			.date,
+			.price {
+				color: colors.$headerFontColor;
+			}
+
+			img {
+				width: 100px;
+			}
+
+			button {
+				font-family: inherit;
+				background-color: colors.$headerFontColor;
+				color: inherit;
+				margin: 10px 0;
+				padding: 5px 15px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.contact {
+	margin: 20px vars.$websiteMargin;
+	display: flex;
+	.contact-form {
+		width: 65%;
+		h2 {
+			color: colors.$headerFontColor;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+		}
+
+		input,
+		textarea,
+		input:focus,
+		textarea:focus {
+			width: 50%;
+			border: none;
+			outline: none;
+			border-bottom: 1px solid #959595;
+		}
+
+		textarea {
+			resize: none;
+		}
+
+		button {
+			font-family: inherit;
+			background-color: colors.$mainColor;
+			color: colors.$whiteFontColor;
+			width: 8%;
+			margin: 10px 0;
+			padding: 15px 0;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	}
+
+	img {
+		width: 35%;
+	}
+}
+
+.map {
+	width: 100%;
+}
+
+.footer {
+	width: 100%;
+	padding: 20px 0;
+	background-color: colors.$mainColor;
+	color: colors.$whiteFontColor;
+	a {
+		color: inherit;
+	}
+	p {
+		margin: 0 vars.$websiteMargin;
+	}
 }

@@ -114,7 +114,7 @@ h2 {
 }
 
 .price-list-background {
-  background-image: url("/images/background-price-list.jpg");
+  background-image: url("../../images/background-price-list.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -160,6 +160,7 @@ h2 {
 
 .digital-dentistry {
   margin: 0 80px;
+  padding-bottom: 50px;
 }
 .digital-dentistry h2 {
   color: #aac4ff;
@@ -175,11 +176,105 @@ h2 {
 }
 
 .courses-inner {
-  height: 1000px;
-  background-image: url("/images/background-courses.jpg");
+  background-image: url("../../images/background-courses.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.courses-inner .courses {
+  margin: 0 80px;
+  color: #ededed;
+}
+.courses-inner .courses h2,
+.courses-inner .courses h3 {
+  padding: 30px 0;
+}
+.courses-inner .courses .courses-card {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
+.courses-inner .courses .course-card {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  width: 20%;
+  text-align: center;
+}
+.courses-inner .courses .course-card h4,
+.courses-inner .courses .course-card .date,
+.courses-inner .courses .course-card .price {
+  color: #aac4ff;
+}
+.courses-inner .courses .course-card img {
+  width: 100px;
+}
+.courses-inner .courses .course-card button {
+  font-family: inherit;
+  background-color: #aac4ff;
+  color: inherit;
+  margin: 10px 0;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact {
+  margin: 20px 80px;
+  display: flex;
+}
+.contact .contact-form {
+  width: 65%;
+}
+.contact .contact-form h2 {
+  color: #aac4ff;
+}
+.contact .contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact-form input,
+.contact .contact-form textarea,
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+  width: 50%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #959595;
+}
+.contact .contact-form textarea {
+  resize: none;
+}
+.contact .contact-form button {
+  font-family: inherit;
+  background-color: #b1b2ff;
+  color: #ededed;
+  width: 8%;
+  margin: 10px 0;
+  padding: 15px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contact img {
+  width: 35%;
+}
+
+.map {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #b1b2ff;
+  color: #ededed;
+}
+.footer a {
+  color: inherit;
+}
+.footer p {
+  margin: 0 80px;
 }
 
 /*# sourceMappingURL=main.css.map */
