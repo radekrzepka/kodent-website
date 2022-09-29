@@ -1,7 +1,97 @@
 @use "vars";
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-family: vars.$font;
+	scroll-behavior: smooth;
+}
+
+.header {
+	height: 70px;
+	background-color: vars.$headerColor;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	margin: 0 vars.$websiteMargin;
+}
+
+.nav-title {
+	color: vars.$whiteFontColor;
+	text-decoration: none;
+	font-size: 32px;
+	font-family: vars.$titleFont;
+}
+
+.nav-list {
+	display: flex;
+	list-style-type: none;
+	color: vars.$whiteFontColor;
+
+	li {
+		margin-left: 20px;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+.video-wrapper {
+	overflow: hidden;
+}
+
+.video {
+	width: 100%;
+	height: 800px;
+	margin: -1px;
+	object-fit: cover;
+	clip-path: inset(1px 1px);
+}
+
+.about-me {
+	margin: 50px vars.$websiteMargin 20px;
+	display: flex;
+	color: vars.$textColor;
+
+	h2 {
+		font-size: 36px;
+		margin-bottom: 20px;
+		color: vars.$headerFontColor;
+	}
+
+	p {
+		padding-top: 20px;
+	}
+
+	.texts {
+		width: 70%;
+		padding-right: 10px;
+	}
+
+	.images {
+		width: 30%;
+		img {
+			width: 90%;
+		}
+	}
+}
+
+.price-list-background {
+	height: 500px;
+	background-image: url("/images/background-section.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.price-list {
+	margin: 0 vars.$websiteMargin;
 }
