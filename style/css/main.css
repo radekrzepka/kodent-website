@@ -220,7 +220,7 @@ h2 {
 }
 
 .contact {
-  margin: 20px 80px;
+  margin: 20px 80px 10px;
   display: flex;
 }
 .contact .contact-form {
@@ -241,6 +241,11 @@ h2 {
   border: none;
   outline: none;
   border-bottom: 1px solid #959595;
+}
+.contact .contact-form input,
+.contact .contact-form textarea {
+  padding: 10px 10px 10px 0;
+  font-family: inherit;
 }
 .contact .contact-form textarea {
   resize: none;
