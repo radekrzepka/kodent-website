@@ -25,9 +25,6 @@ h2 {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  z-index: 3;
   width: 100%;
   padding: 1.5rem 0;
   background-color: #9ce1dc;
@@ -95,6 +92,11 @@ h2 {
   display: flex;
   justify-content: space-between;
   color: #1f1f1f;
+  opacity: 0;
+  transition: 800ms;
+}
+.about-me.active {
+  opacity: 1;
 }
 .about-me h2 {
   color: #115a5a;
@@ -119,6 +121,11 @@ h2 {
   background-position: center;
   background-size: cover;
   padding: 2rem 0;
+  opacity: 0;
+  transition: 800ms;
+}
+.price-list-background.active {
+  opacity: 1;
 }
 .price-list-background .price-list {
   margin: 0 8rem;
@@ -147,6 +154,11 @@ h2 {
 
 .digital-dentistry {
   margin: 0 8rem;
+  opacity: 0;
+  transition: 800ms;
+}
+.digital-dentistry.active {
+  opacity: 1;
 }
 .digital-dentistry h2 {
   color: #115a5a;
@@ -154,6 +166,10 @@ h2 {
 .digital-dentistry p {
   padding-bottom: 2rem;
   color: #1f1f1f;
+}
+.digital-dentistry .images {
+  display: flex;
+  justify-content: space-evenly;
 }
 .digital-dentistry img {
   padding-bottom: 2rem;
@@ -165,6 +181,11 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  opacity: 0;
+  transition: 800ms;
+}
+.courses-background.active {
+  opacity: 1;
 }
 .courses-background .courses {
   margin: 0 8rem;
@@ -212,6 +233,11 @@ h2 {
 .contact {
   margin: 2rem 8rem;
   display: flex;
+  opacity: 0;
+  transition: 800ms;
+}
+.contact.active {
+  opacity: 1;
 }
 .contact .contact-form {
   width: 65%;
@@ -228,7 +254,7 @@ h2 {
 .contact .contact-form textarea,
 .contact .contact-form input:focus,
 .contact .contact-form textarea:focus {
-  width: 50%;
+  width: 75%;
   border: none;
   outline: none;
   border-bottom: 1px solid #959595;
@@ -243,7 +269,7 @@ h2 {
   resize: none;
 }
 .contact .contact-form button {
-  width: 8%;
+  width: 15%;
   margin: 1rem 0;
   padding: 1.5rem 0;
   background-color: #9ce1dc;
@@ -259,6 +285,11 @@ h2 {
 
 .map {
   width: 100%;
+  opacity: 0;
+  transition: 800ms;
+}
+.map.active {
+  opacity: 1;
 }
 
 .footer {

@@ -24,6 +24,7 @@
 			type="image/png"
 			sizes="16x16"
 			href="images/favicons/favicon-16x16.png" />
+		<script src="./script/scroll.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -49,7 +50,7 @@
 				Your browser does not support the video tag.
 			</video>
 		</div>
-		<section class="about-me">
+		<section class="about-me main-section">
 			<div class="texts">
 				<h2 id="szczerbaniewicz">Błażej Szczerabniewicz</h2>
 				<p>
@@ -85,7 +86,7 @@
 					alt="Zdjęcie Błażeja Szczerbaniewicza" />
 			</div>
 		</section>
-		<div class="price-list-background">
+		<div class="price-list-background main-section">
 			<section class="price-list">
 				<h2 id="uslugi">Usługi</h2>
 				<table>
@@ -122,7 +123,7 @@
 				</table>
 			</section>
 		</div>
-		<section class="digital-dentistry" id="stomatologia-cyfrowa">
+		<section class="digital-dentistry main-section" id="stomatologia-cyfrowa">
 			<h2>Stomatologia cyfrowa</h2>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias
@@ -137,9 +138,14 @@
 				quam quisquam quos repellat soluta totam ut vitae! A ad deleniti error
 				facilis in magni neque vel veritatis?
 			</p>
-			<img
-				src="./images/stomatologia-cyfrowa-1.jpg"
-				alt="Zdjęcie dentysty przedstawiającego kobiecie na ekranie zęby" />
+			<div class="images">
+				<img
+					src="./images/stomatologia-cyfrowa-1.jpg"
+					alt="Zdjęcie dentysty przedstawiającego kobiecie na ekranie zęby" />
+				<img
+					src="./images/stomatologia-cyfrowa-3.jpg"
+					alt="Zdjęcie dentysty wskazującego palcem na tablecie" />
+			</div>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci
 				deleniti dignissimos dolorem incidunt quae quas quisquam recusandae
@@ -184,10 +190,14 @@
 				inventore, omnis perspiciatis, quisquam sit soluta unde veniam!
 				Asperiores beatae debitis dolore eligendi, libero maiores.
 			</p>
-			<img src=./images/stomatologia-cyfrowa-2.jpg alt="Zdjęcie dentysty
-			montającego plombe w zębie">
+			<div class="images">
+				<img src=./images/stomatologia-cyfrowa-2.jpg alt="Zdjęcie dentysty
+				montającego plombe w zębie"> <img
+				src=./images/stomatologia-cyfrowa-4.jpg alt="Zdjęcie przedstawiające
+				gabient dentystyczny">
+			</div>
 		</section>
-		<div class="courses-background">
+		<div class="courses-background main-section">
 			<section class="courses">
 				<h2 id="szkolenia">Szkolenia</h2>
 				<p class="description">
@@ -256,8 +266,8 @@
 			allowfullscreen=""
 			loading="lazy"
 			referrerpolicy="no-referrer-when-downgrade"
-			class="map"></iframe>
-		<section class="contact">
+			class="map main-section"></iframe>
+		<section class="contact main-section">
 			<div class="contact-form">
 				<h2 id="kontakt">Skontaktuj się z nami</h2>
 				<form action="">

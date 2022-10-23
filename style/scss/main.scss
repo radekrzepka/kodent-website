@@ -29,9 +29,9 @@ h2 {
 }
 
 .header {
-	position: fixed;
-	top: 0;
-	z-index: 3;
+	//position: fixed;
+	//top: 0;
+	//z-index: 3;
 	width: 100%;
 	padding: 1.5rem 0;
 	background-color: colors.$mainColor;
@@ -105,6 +105,12 @@ h2 {
 	display: flex;
 	justify-content: space-between;
 	color: colors.$textColor;
+	opacity: 0;
+	transition: 800ms;
+
+	&.active {
+		opacity: 1;
+	}
 
 	h2 {
 		color: colors.$headerFontColor;
@@ -133,6 +139,12 @@ h2 {
 	background-position: center;
 	background-size: cover;
 	padding: 2rem 0;
+	opacity: 0;
+	transition: 800ms;
+
+	&.active {
+		opacity: 1;
+	}
 
 	.price-list {
 		margin: 0 vars.$websiteMargin;
@@ -167,6 +179,12 @@ h2 {
 
 .digital-dentistry {
 	margin: 0 vars.$websiteMargin;
+	opacity: 0;
+	transition: 800ms;
+
+	&.active {
+		opacity: 1;
+	}
 
 	h2 {
 		color: colors.$headerFontColor;
@@ -175,6 +193,11 @@ h2 {
 	p {
 		padding-bottom: 2rem;
 		color: colors.$textColor;
+	}
+
+	.images {
+		display: flex;
+		justify-content: space-evenly;
 	}
 
 	img {
@@ -188,6 +211,12 @@ h2 {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	opacity: 0;
+	transition: 800ms;
+
+	&.active {
+		opacity: 1;
+	}
 
 	.courses {
 		margin: 0 vars.$websiteMargin;
@@ -243,6 +272,12 @@ h2 {
 .contact {
 	margin: 2rem vars.$websiteMargin;
 	display: flex;
+	opacity: 0;
+	transition: 800ms;
+
+	&.active {
+		opacity: 1;
+	}
 
 	.contact-form {
 		width: 65%;
@@ -260,7 +295,7 @@ h2 {
 		textarea,
 		input:focus,
 		textarea:focus {
-			width: 50%;
+			width: 75%;
 			border: none;
 			outline: none;
 			border-bottom: 1px solid #959595;
@@ -278,7 +313,7 @@ h2 {
 		}
 
 		button {
-			width: 8%;
+			width: 15%;
 			margin: 1rem 0;
 			padding: 1.5rem 0;
 			background-color: colors.$mainColor;
@@ -297,6 +332,12 @@ h2 {
 
 .map {
 	width: 100%;
+	opacity: 0;
+	transition: 800ms;
+
+	&.active {
+		opacity: 1;
+	}
 }
 
 .footer {
