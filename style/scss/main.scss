@@ -16,6 +16,8 @@ html {
 
 body {
 	font-size: 1.6rem;
+	display: flex;
+	flex-direction: column;
 }
 
 h1 {
@@ -25,13 +27,13 @@ h1 {
 
 h2 {
 	font-size: 3.6rem;
-	margin: 2rem 0;
+	padding: 2rem 0;
 }
 
 .header {
 	width: 100%;
 	padding: 1.5rem 0;
-	background-color: colors.$mainColor;
+	background-color: colors.$mainBackgroundColor;
 	opacity: 0.95;
 
 	.nav {
@@ -88,7 +90,7 @@ h2 {
 		margin-top: 1rem;
 		padding: 1rem 3.5rem;
 		border-radius: 5px;
-		background-color: colors.$mainColor;
+		background-color: colors.$mainBackgroundColor;
 		color: inherit;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -98,10 +100,11 @@ h2 {
 }
 
 .about-me {
-	margin: 0 vars.$websiteMargin;
+	padding: 0 vars.$websiteMargin;
 	display: flex;
 	justify-content: space-between;
-	color: colors.$textColor;
+	background-color: colors.$whiteBackgroundColor;
+	color: colors.$textFontColor;
 	opacity: 0;
 	transition: 800ms;
 
@@ -119,23 +122,13 @@ h2 {
 
 	.texts {
 		width: 50%;
-		padding-right: 1rem;
-	}
-
-	.images {
-		width: 30%;
-		img {
-			max-width: 100%;
-		}
 	}
 }
 
-.price-list-background {
-	background-image: url("../../images/background-price-list.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	padding: 2rem 0;
+.price-list {
+	padding: 2rem vars.$websiteMargin;
+	background-color: colors.$darkBackgroundColor;
+	color: colors.$whiteFontColor;
 	opacity: 0;
 	transition: 800ms;
 
@@ -143,39 +136,35 @@ h2 {
 		opacity: 1;
 	}
 
-	.price-list {
-		margin: 0 vars.$websiteMargin;
+	h2 {
+		margin-top: 0;
 		color: colors.$whiteFontColor;
+	}
 
-		h2 {
-			margin-top: 0;
-			color: colors.$whiteFontColor;
-		}
+	table {
+		width: 100%;
+	}
 
-		table {
-			width: 100%;
-		}
+	th {
+		padding: 2rem;
+	}
 
-		th {
-			padding: 2rem;
-		}
+	td {
+		padding: 1rem;
+	}
 
-		td {
-			padding: 1rem;
-		}
-
-		table,
-		tr,
-		th,
-		td {
-			border: 1px solid #fff;
-			border-collapse: collapse;
-		}
+	table,
+	tr,
+	th,
+	td {
+		border: 1px solid #fff;
+		border-collapse: collapse;
 	}
 }
 
 .digital-dentistry {
-	margin: 0 vars.$websiteMargin;
+	padding: 0 vars.$websiteMargin;
+	background-color: colors.$brightBackgroundColor;
 	opacity: 0;
 	transition: 800ms;
 
@@ -189,7 +178,7 @@ h2 {
 
 	p {
 		padding-bottom: 2rem;
-		color: colors.$textColor;
+		color: colors.$textFontColor;
 	}
 
 	.images {
@@ -203,11 +192,10 @@ h2 {
 	}
 }
 
-.courses-background {
-	background-image: url("../../images/background-courses.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+.courses {
+	padding: 2rem vars.$websiteMargin;
+	background-color: colors.$darkBackgroundColor;
+	color: colors.$whiteFontColor;
 	opacity: 0;
 	transition: 800ms;
 
@@ -215,60 +203,56 @@ h2 {
 		opacity: 1;
 	}
 
-	.courses {
-		margin: 0 vars.$websiteMargin;
-		color: colors.$whiteFontColor;
-		padding: 2rem 0;
 
-		h2 {
-			margin-top: 0;
+	h2 {
+		margin-top: 0;
+	}
+
+	h3 {
+		margin: 2rem 0;
+		font-size: 2.4rem;
+	}
+
+	.courses-card {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		justify-content: space-evenly;
+	}
+
+	.course-card {
+		border: 1px solid #fff;
+		border-radius: 5px;
+		width: max(25%, 400px);
+		text-align: center;
+
+		h4,
+		.date,
+		.price {
+			color: colors.$whiteFontColor;
 		}
 
-		h3 {
-			margin: 2rem 0;
-			font-size: 2.4rem;
+		img {
+			width: 100px;
 		}
 
-		.courses-card {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 1rem;
-			justify-content: space-evenly;
-		}
-
-		.course-card {
-			border: 1px solid #fff;
+		button {
+			margin: 1rem 0;
+			padding: 0.5rem 1.5rem;
+			background-color: colors.$headerFontColor;
+			color: inherit;
+			border: none;
 			border-radius: 5px;
-			width: max(25%, 400px);
-			text-align: center;
-
-			h4,
-			.date,
-			.price {
-				color: colors.$headerFontColor;
-			}
-
-			img {
-				width: 100px;
-			}
-
-			button {
-				margin: 1rem 0;
-				padding: 0.5rem 1.5rem;
-				background-color: colors.$headerFontColor;
-				color: inherit;
-				border: none;
-				border-radius: 5px;
-				font-family: inherit;
-				cursor: pointer;
-			}
+			font-family: inherit;
+			cursor: pointer;
 		}
 	}
 }
 
 .contact {
-	margin: 2rem vars.$websiteMargin;
+	padding: 2rem vars.$websiteMargin;
 	display: flex;
+	background-color: colors.$brightBackgroundColor;
 	opacity: 0;
 	transition: 800ms;
 
@@ -301,6 +285,7 @@ h2 {
 		input,
 		textarea {
 			padding: 10px 10px 10px 0;
+			background-color: inherit;
 			font-family: inherit;
 		}
 
@@ -313,7 +298,7 @@ h2 {
 			width: 15%;
 			margin: 1rem 0;
 			padding: 1.5rem 0;
-			background-color: colors.$mainColor;
+			background-color: colors.$mainBackgroundColor;
 			color: colors.$whiteFontColor;
 			border: none;
 			border-radius: 5px;
@@ -340,7 +325,7 @@ h2 {
 .footer {
 	width: 100%;
 	padding: 2rem 0;
-	background-color: colors.$mainColor;
+	background-color: colors.$mainBackgroundColor;
 	color: colors.$whiteFontColor;
 	a {
 		color: inherit;
