@@ -127,22 +127,6 @@ h2 {
   margin-top: 0;
   color: #ffffff;
 }
-.price-list table {
-  width: 100%;
-}
-.price-list th {
-  padding: 2rem;
-}
-.price-list td {
-  padding: 1rem;
-}
-.price-list table,
-.price-list tr,
-.price-list th,
-.price-list td {
-  border: 1px solid #fff;
-  border-collapse: collapse;
-}
 
 .digital-dentistry {
   padding: 0 8rem;
