@@ -137,13 +137,20 @@ p:not([class]) {
 .video-wrapper {
 	position: relative;
 	width: 100%;
-	min-height: 100%;
+	height: 100vh;
 
 	.video {
 		display: block;
 		width: 100%;
-		min-height: 100%;
+		height: 100%;
+		object-fit: cover;
 		filter: brightness(40%);
+	}
+
+	@media (max-width: 768px) {
+		& {
+			height: 80vh;
+		}
 	}
 }
 
@@ -168,9 +175,15 @@ p:not([class]) {
 		font-family: inherit;
 	}
 
+	@media (max-width: 1024px) {
+		& {
+			left: vars.$mobileWebsiteMargin;
+		}
+	}
+
 	@media (max-width: 768px) {
 		& {
-			top: 15%;
+			top: 5%;
 		}
 
 		h1 {
@@ -179,6 +192,10 @@ p:not([class]) {
 
 		h2 {
 			font-size: 2rem;
+		}
+
+		a {
+			padding: 0.5rem 2rem;
 		}
 	}
 }
@@ -253,6 +270,12 @@ p:not([class]) {
 		color: #000;
 		text-decoration: none;
 		cursor: pointer;
+	}
+
+	@media (max-width: 768px) {
+		.modal-content {
+			width: 80%;
+		}
 	}
 }
 
@@ -356,8 +379,8 @@ p:not([class]) {
 	}
 
 	@media (max-width: 768px) {
-		img {
-			width: 70%;
+		.images img {
+			width: 90%;
 		}
 	}
 }
@@ -506,12 +529,22 @@ p:not([class]) {
 		.contact-form {
 			width: 100%;
 		}
-		button {
-			width: 30%;
-		}
 
 		img {
 			display: none;
+		}
+
+		.contact-form {
+			input,
+			textarea,
+			input:focus,
+			textarea:focus {
+				width: 100%;
+			}
+
+			button {
+				width: 50%;
+			}
 		}
 	}
 }
@@ -521,9 +554,11 @@ p:not([class]) {
 	padding: 2rem 0;
 	background-color: colors.$mainBackgroundColor;
 	color: colors.$whiteFontColor;
+
 	a {
 		color: inherit;
 	}
+
 	p {
 		margin: 0 vars.$websiteMargin;
 	}
@@ -531,6 +566,16 @@ p:not([class]) {
 	@media (max-width: 1024px) {
 		p {
 			margin: 0 vars.$mobileWebsiteMargin;
+		}
+	}
+
+	@media (max-width: 768px) {
+		& {
+			padding: 1rem 0;
+		}
+
+		p {
+			font-size: 1.4rem;
 		}
 	}
 }

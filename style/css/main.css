@@ -116,13 +116,20 @@ p:not([class]) {
 .video-wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100vh;
 }
 .video-wrapper .video {
   display: block;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   filter: brightness(40%);
+}
+@media (max-width: 768px) {
+  .video-wrapper {
+    height: 80vh;
+  }
 }
 
 .video-text {
@@ -145,15 +152,23 @@ p:not([class]) {
   letter-spacing: 2.5px;
   font-family: inherit;
 }
+@media (max-width: 1024px) {
+  .video-text {
+    left: 2rem;
+  }
+}
 @media (max-width: 768px) {
   .video-text {
-    top: 15%;
+    top: 5%;
   }
   .video-text h1 {
     font-size: 4rem;
   }
   .video-text h2 {
     font-size: 2rem;
+  }
+  .video-text a {
+    padding: 0.5rem 2rem;
   }
 }
 
@@ -219,6 +234,11 @@ p:not([class]) {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .modal .modal-content {
+    width: 80%;
+  }
 }
 
 .price-list {
@@ -306,8 +326,8 @@ p:not([class]) {
   }
 }
 @media (max-width: 768px) {
-  .digital-dentistry img {
-    width: 70%;
+  .digital-dentistry .images img {
+    width: 90%;
   }
 }
 
@@ -436,11 +456,17 @@ p:not([class]) {
   .contact .contact-form {
     width: 100%;
   }
-  .contact button {
-    width: 30%;
-  }
   .contact img {
     display: none;
+  }
+  .contact .contact-form input,
+.contact .contact-form textarea,
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+    width: 100%;
+  }
+  .contact .contact-form button {
+    width: 50%;
   }
 }
 
@@ -459,6 +485,14 @@ p:not([class]) {
 @media (max-width: 1024px) {
   .footer p {
     margin: 0 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 1rem 0;
+  }
+  .footer p {
+    font-size: 1.4rem;
   }
 }
 
