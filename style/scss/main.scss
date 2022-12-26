@@ -66,13 +66,11 @@ h2 {
 
 .video-wrapper {
 	position: relative;
+	width: 100%;
 
 	.video {
+		display: block;
 		width: 100%;
-		height: 101vh;
-		margin: -1px;
-		object-fit: cover;
-		clip-path: inset(1px 1px);
 		filter: brightness(40%);
 	}
 }
@@ -125,6 +123,43 @@ h2 {
 	}
 }
 
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+
+	.modal-content {
+		position: relative;
+		background-color: #fefefe;
+		margin: auto;
+		padding: 20px;
+		border: 1px solid #888;
+		width: 60%;
+	}
+
+	.close {
+		color: #aaaaaa;
+		position: absolute;
+		top: 0;
+		right: 20px;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
 .price-list {
 	padding: 2rem vars.$websiteMargin;
 	background-color: colors.$darkBackgroundColor;
@@ -139,6 +174,35 @@ h2 {
 	h2 {
 		margin-top: 0;
 		color: colors.$whiteFontColor;
+	}
+
+	.list-element {
+		display: flex;
+		align-items: center;
+		width: 80%;
+		margin: 1rem 0;
+		padding: 1rem 0;
+		border-radius: 1rem;
+		background-color: #dbe2ef;
+		color: colors.$textFontColor;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+
+		img {
+			display: block;
+			height: 50px;
+			width: auto;
+			margin-left: 3rem;
+		}
+
+		h4 {
+			margin-left: 2rem;
+			font-size: 2rem;
+		}
 	}
 }
 
@@ -182,7 +246,6 @@ h2 {
 	&.active {
 		opacity: 1;
 	}
-
 
 	h2 {
 		margin-top: 0;

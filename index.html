@@ -10,21 +10,26 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
-			rel="stylesheet" />
+			rel="stylesheet"
+		/>
 		<link
 			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
-			rel="stylesheet" />
+			rel="stylesheet"
+		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="images/favicons/favicon-32x32.png" />
+			href="images/favicons/favicon-32x32.png"
+		/>
 		<link
 			rel="icon"
 			type="image/png"
 			sizes="16x16"
-			href="images/favicons/favicon-16x16.png" />
-		<script src="./js/scroll.js" defer></script>
+			href="images/favicons/favicon-16x16.png"
+		/>
+		<script src="./js/scrollAnimation.js" defer></script>
+		<script src="./js/priceListModal.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -40,7 +45,7 @@
 			</nav>
 		</header>
 		<div class="video-wrapper" id="nav">
-			<div class="video-text">
+			<div class="video-text" id="nav">
 				<h1>Kodent</h1>
 				<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
 				<a href="#szczerbaniewicz">Dowiedz się wiecej</a>
@@ -81,9 +86,56 @@
 				</p>
 			</div>
 		</section>
+
+		<div class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h4 class="modal-header">DIAGNOSTYKA</h4>
+				<p class="modal-paragraph">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					Exercitationem, provident obcaecati libero commodi recusandae ipsam
+					error iure velit rerum asperiores ipsum expedita praesentium nulla
+					totam culpa laboriosam? Tempore, praesentium incidunt?
+				</p>
+			</div>
+		</div>
+
 		<section class="price-list main-section">
 			<h2 id="uslugi">Usługi</h2>
-			
+			<div class="list">
+				<div class="list-element">
+					<img src="./images/icons/price-list-icons/price-list-1.png" alt="" />
+					<h4>DIAGNOSTYKA</h4>
+				</div>
+				<div class="list-element">
+					<img src="./images/icons/price-list-icons/price-list-2.png" alt="" />
+					<h4>NARKOZA</h4>
+				</div>
+				<div class="list-element">
+					<img src="./images/icons/price-list-icons/price-list-3.png" alt="" />
+					<h4>ZACHOWAWCZA</h4>
+				</div>
+				<div class="list-element">
+					<img src="./images/icons/price-list-icons/price-list-4.png" alt="" />
+					<h4>ENDODONACJA</h4>
+				</div>
+				<div class="list-element">
+					<img src="./images/icons/price-list-icons/price-list-5.png" alt="" />
+					<h4>ORTODONCJA</h4>
+				</div>
+				<div class="list-element">
+					<img src="./images/icons/price-list-icons/price-list-6.png" alt="" />
+					<h4>PERIODONTOLOGIA</h4>
+				</div>
+				<div class="list-element">
+					<img src="./images/icons/price-list-icons/price-list-7.png" alt="" />
+					<h4>CHIRURGIA</h4>
+				</div>
+				<div class="list-element">
+					<img src="./images/icons/price-list-icons/price-list-8.png" alt="" />
+					<h4>IMPLANTOLOGIA</h4>
+				</div>
+			</div>
 		</section>
 		<section class="digital-dentistry main-section" id="stomatologia-cyfrowa">
 			<h2>Stomatologia cyfrowa</h2>
@@ -103,10 +155,12 @@
 			<div class="images">
 				<img
 					src="./images/stomatologia-cyfrowa-1.jpg"
-					alt="Zdjęcie dentysty przedstawiającego kobiecie na ekranie zęby" />
+					alt="Zdjęcie dentysty przedstawiającego kobiecie na ekranie zęby"
+				/>
 				<img
 					src="./images/stomatologia-cyfrowa-3.jpg"
-					alt="Zdjęcie dentysty wskazującego palcem na tablecie" />
+					alt="Zdjęcie dentysty wskazującego palcem na tablecie"
+				/>
 			</div>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci
@@ -179,11 +233,11 @@
 					<p class="price">Cena: 1350 zł</p>
 					<p>
 						Opis: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
-						eaque, esse illum impedit nobis nostrum quod ratione sapiente!
-						Alias aspernatur atque consequuntur debitis delectus dolores
-						eligendi est et expedita fugit ipsam iusto, minus molestias, nihil
-						omnis praesentium quasi quia reiciendis, similique velit veniam
-						voluptas voluptatum. Cum dolorem est necessitatibus quam.
+						eaque, esse illum impedit nobis nostrum quod ratione sapiente! Alias
+						aspernatur atque consequuntur debitis delectus dolores eligendi est
+						et expedita fugit ipsam iusto, minus molestias, nihil omnis
+						praesentium quasi quia reiciendis, similique velit veniam voluptas
+						voluptatum. Cum dolorem est necessitatibus quam.
 					</p>
 					<button>Pobierz więcej informacji o szkoleniu</button>
 				</div>
@@ -194,11 +248,11 @@
 					<p class="price">Cena: 1990 zł</p>
 					<p>
 						Opis: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
-						eaque, esse illum impedit nobis nostrum quod ratione sapiente!
-						Alias aspernatur atque consequuntur debitis delectus dolores
-						eligendi est et expedita fugit ipsam iusto, minus molestias, nihil
-						omnis praesentium quasi quia reiciendis, similique velit veniam
-						voluptas voluptatum. Cum dolorem est necessitatibus quam.
+						eaque, esse illum impedit nobis nostrum quod ratione sapiente! Alias
+						aspernatur atque consequuntur debitis delectus dolores eligendi est
+						et expedita fugit ipsam iusto, minus molestias, nihil omnis
+						praesentium quasi quia reiciendis, similique velit veniam voluptas
+						voluptatum. Cum dolorem est necessitatibus quam.
 					</p>
 					<button>Pobierz więcej informacji o szkoleniu</button>
 				</div>
@@ -209,11 +263,11 @@
 					<p class="price">Cena: 2760 zł</p>
 					<p>
 						Opis: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
-						eaque, esse illum impedit nobis nostrum quod ratione sapiente!
-						Alias aspernatur atque consequuntur debitis delectus dolores
-						eligendi est et expedita fugit ipsam iusto, minus molestias, nihil
-						omnis praesentium quasi quia reiciendis, similique velit veniam
-						voluptas voluptatum. Cum dolorem est necessitatibus quam.
+						eaque, esse illum impedit nobis nostrum quod ratione sapiente! Alias
+						aspernatur atque consequuntur debitis delectus dolores eligendi est
+						et expedita fugit ipsam iusto, minus molestias, nihil omnis
+						praesentium quasi quia reiciendis, similique velit veniam voluptas
+						voluptatum. Cum dolorem est necessitatibus quam.
 					</p>
 					<button>Pobierz więcej informacji o szkoleniu</button>
 				</div>
@@ -226,7 +280,8 @@
 			allowfullscreen=""
 			loading="lazy"
 			referrerpolicy="no-referrer-when-downgrade"
-			class="map main-section"></iframe>
+			class="map main-section"
+		></iframe>
 		<section class="contact main-section">
 			<div class="contact-form">
 				<h2 id="kontakt">Skontaktuj się z nami</h2>
@@ -240,7 +295,8 @@
 			</div>
 			<img
 				src="./images/contact-with-us.jpg"
-				alt="Zdjęcie osoby piszącej na laptopie" />
+				alt="Zdjęcie osoby piszącej na laptopie"
+			/>
 		</section>
 		<footer class="footer">
 			<p>
